@@ -1,0 +1,6 @@
+res://scenes/UI_scenes/lobby_menu/multiplayer_lobby.gd
+res://scenes/UI_scenes/lobby_menu/multiplayer_lobby.tscn
+res://Default.tres
+res://scenes/UI_scenes/main_menu/main_menu.tscn
+res://scenes/UI_scenes/lobby_menu/Control.gd
+res://scenes/UI_scenes/lobby_menu/server_info.tscn

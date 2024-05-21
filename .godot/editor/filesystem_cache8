@@ -1,0 +1,71 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1716294541
+Default.tres::Theme::1718022108542412568::1716294541::0::1::::<><>::uid://d38uukvy1tj6w::::res://assets/objects/ui/gui.png<>uid://ddmbfey1st6ey::::res://assets/fonts/ka1.ttf<>uid://bcxlqeemg6nnd::::res://assets/fonts/INVASION2000.TTF
+::res://assets/::1716292963
+::res://assets/fonts/::1716293099
+INVASION2000.TTF::FontFile::2574975735762545353::1716292963::1716293099::1::::<><>::
+ka1.ttf::FontFile::7394671009379272980::1716292963::1716293099::1::::<><>::
+::res://assets/objects/::1716294541
+icon.svg::CompressedTexture2D::8418858965932065993::1716292963::1716293099::1::::<><>::
+menu_bg.png::CompressedTexture2D::5362680810514650072::1716292963::1716293100::1::::<><>::
+::res://assets/objects/joystick_assets/::1716293099
+Joystick.png::CompressedTexture2D::2779724415469891138::1716292963::1716293099::1::::<><>::
+JoystickPack Preview.png::CompressedTexture2D::2309419664890790576::1716292963::1716293099::1::::<><>::
+JoystickPack.png::CompressedTexture2D::6759497680245634090::1716292963::1716293099::1::::<><>::
+JoystickSplitted.png::CompressedTexture2D::6538873972053594189::1716292963::1716293099::1::::<><>::
+LargeHandleFilled.png::CompressedTexture2D::1490190873632892323::1716292963::1716293099::1::::<><>::
+LargeHandleFilledGrey.png::CompressedTexture2D::128527961969256792::1716292963::1716293099::1::::<><>::
+SmallHandle.png::CompressedTexture2D::7013706888895694741::1716292963::1716293099::1::::<><>::
+SmallHandleFilled.png::CompressedTexture2D::392029077924143158::1716292963::1716293099::1::::<><>::
+SmallHandleFilledGrey.png::CompressedTexture2D::4004575710491106388::1716292963::1716293099::1::::<><>::
+::res://assets/objects/ui/::1716294557
+back.png::CompressedTexture2D::5788373953653243482::1716292963::1716294541::1::::<><>::
+female.png::CompressedTexture2D::5637140305028110313::1716294557::1716294557::1::::<><>::
+gui.png::CompressedTexture2D::9193924753361957072::1716292963::1716294541::1::::<><>::
+male.png::CompressedTexture2D::5377983992087817703::1716294557::1716294557::1::::<><>::
+::res://assets/player_assets/::1716292963
+::res://assets/player_assets/MALE_CHAR/::1716293099
+BOY.png::CompressedTexture2D::5115814725670100997::1716292963::1716293099::1::::<><>::
+IDLE B.png::CompressedTexture2D::2543494481234857771::1716292963::1716293099::1::::<><>::
+IDLE F.png::CompressedTexture2D::2239345798442524319::1716292963::1716293099::1::::<><>::
+IDLE L NEW.png::CompressedTexture2D::4574294851579362285::1716292963::1716293099::1::::<><>::
+IDLE L.png::CompressedTexture2D::6863092007619315375::1716292963::1716293099::1::::<><>::
+IDLE R.png::CompressedTexture2D::2651438609741887224::1716292963::1716293099::1::::<><>::
+Main_Char_Animations.png::CompressedTexture2D::641775874444735308::1716292963::1716293099::1::::<><>::
+WALK BACK.png::CompressedTexture2D::6051972746460718424::1716292963::1716293099::1::::<><>::
+WALK FRONT.png::CompressedTexture2D::2799123590874347635::1716292963::1716293099::1::::<><>::
+WALK L.png::CompressedTexture2D::1046389072117750661::1716292963::1716293099::1::::<><>::
+WALK R.png::CompressedTexture2D::6335268662625190466::1716292963::1716293099::1::::<><>::
+::res://assets/tile_sets/::1716293101
+BEACH1.png::CompressedTexture2D::9212384047398730329::1716292963::1716293101::1::::<><>::
+bEACH SAND.png::CompressedTexture2D::566217370163624322::1716292963::1716293099::1::::<><>::
+::res://scenes/::1716292963
+::res://scenes/level_scenes/::1716292963
+::res://scenes/level_scenes/basic_map/::1716292963
+basic_map.gd::GDScript::-1::1716292963::0::1::::<>Node2D<>::
+basic_map.tscn::PackedScene::3721216906690936450::1716292963::0::1::::<><>::res://scenes/level_scenes/basic_map/basic_map.gd<>uid://bj20muoximt4f::::res://scenes/player_scenes/MALE_PLAYER/male_player.tscn<>uid://icjrucmnthhq::::res://assets/tile_sets/bEACH SAND.png<>uid://d4isvb6sjbq86::::res://assets/tile_sets/BEACH1.png
+::res://scenes/level_scenes/map_objects/::1716292963
+invis_block.tscn::PackedScene::8402282442919237686::1716292963::0::1::::<><>::
+::res://scenes/player_scenes/::1716292963
+::res://scenes/player_scenes/MALE_PLAYER/::1716292963
+male_player.gd::GDScript::-1::1716292963::0::1::::<>CharacterBody2D<>::
+male_player.gdshader::Shader::-1::1716292963::0::1::::<><>::
+male_player.tscn::PackedScene::3075398903291491563::1716292963::0::1::::<><>::res://scenes/player_scenes/MALE_PLAYER/male_player.gd<>uid://je47p35rl2yi::::res://assets/player_assets/MALE_CHAR/Main_Char_Animations.png<>res://scenes/player_scenes/MALE_PLAYER/male_player.gdshader<>uid://smt8r84pk1vk::::res://scenes/UI_scenes/controls/joystick/joystick.tscn
+::res://scenes/UI_scenes/::1716292963
+::res://scenes/UI_scenes/controls/::1716292963
+::res://scenes/UI_scenes/controls/joystick/::1716292963
+joystick.gd::GDScript::-1::1716292963::0::1::::<>Node2D<>::
+joystick.tscn::PackedScene::1289385217808318940::1716292963::0::1::::<><>::res://scenes/UI_scenes/controls/joystick/joystick.gd<>uid://bfurwjgeblf7g::::res://assets/objects/joystick_assets/Joystick.png<>uid://b3i3pj3pi8oi::::res://assets/objects/joystick_assets/LargeHandleFilledGrey.png<>res://scenes/UI_scenes/controls/joystick/Knob.gd
+Knob.gd::GDScript::-1::1716292963::0::1::::<>Sprite2D<>::
+::res://scenes/UI_scenes/lobby_menu/::1716294541
+Control.gd::GDScript::-1::1716292963::0::1::::<>Control<>::
+multiplayer_lobby.gd::GDScript::-1::1716293933::0::1::::<>Control<>::
+multiplayer_lobby.tscn::PackedScene::8135543184948831878::1716294541::0::1::::<><>::res://scenes/UI_scenes/lobby_menu/multiplayer_lobby.gd<>uid://yqhtqr76mkc3::::res://Default.tres<>res://scenes/UI_scenes/lobby_menu/Control.gd<>uid://cinytmjy2vwdc::::res://assets/objects/menu_bg.png<>res://scenes/UI_scenes/main_menu/background.gd<>uid://borv4gmcqi7gd::::res://scenes/UI_scenes/lobby_menu/server_info.tscn<>uid://cop6w5ml78oji::::res://assets/objects/ui/back.png
+ServerInfo.gd::GDScript::-1::1716292963::0::1::::<>HBoxContainer<>::
+server_info.tscn::PackedScene::3405486095106266063::1716292963::0::1::::<><>::res://scenes/UI_scenes/lobby_menu/ServerInfo.gd<>uid://yqhtqr76mkc3::::res://Default.tres<>uid://brhko5m05gsw0::::res://assets/objects/gui.png
+::res://scenes/UI_scenes/main_menu/::1716293655
+background.gd::GDScript::-1::1716292963::0::1::::<>Sprite2D<>::
+main_menu.gd::GDScript::-1::1716292963::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::2556554367464034368::1716293655::0::1::::<><>::res://scenes/UI_scenes/main_menu/main_menu.gd<>uid://cinytmjy2vwdc::::res://assets/objects/menu_bg.png<>res://scenes/UI_scenes/main_menu/background.gd<>uid://yqhtqr76mkc3::::res://Default.tres
+::res://scripts/::1716292963
+GameManager.gd::GDScript::-1::1716292963::0::1::::<>Node<>::
