@@ -4,9 +4,9 @@ extends Control
 @export var port = 35000
 var peer
 var addresses = []
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("ready")
 	multiplayer.peer_disconnected.connect(peer_disconnected)
 	multiplayer.connected_to_server.connect(connected_to_server)
 	multiplayer.connection_failed.connect(connection_failed)
@@ -16,6 +16,7 @@ func _ready():
 	
 	$Control.joinGame.connect(JoinByIP)
 	pass # Replace with function body.
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,7 +30,9 @@ func send_player_info(username, ids):
 		GameManager.Players[ids] = {
 			"id": ids,
 			"name": username,
-			"is_it": false
+			"is_it": false,
+			"sprites": "male",
+			"score": 0
 		}
 	if multiplayer.is_server():
 		for i in GameManager.Players:
@@ -115,6 +118,4 @@ func _on_start_button_down():
 	start_game.rpc()
 	pass # Replace with function body.
 
-func _on_back_button_down():
-	get_tree().change_scene_to_file("res://scenes/UI_scenes/main_menu/main_menu.tscn")
-	pass
+

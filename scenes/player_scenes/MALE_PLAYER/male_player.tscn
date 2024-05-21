@@ -1,11 +1,14 @@
-[gd_scene load_steps=33 format=3 uid="uid://bj20muoximt4f"]
+[gd_scene load_steps=35 format=3 uid="uid://bj20muoximt4f"]
 
 [ext_resource type="Script" path="res://scenes/player_scenes/MALE_PLAYER/male_player.gd" id="1_qd2d6"]
 [ext_resource type="Texture2D" uid="uid://je47p35rl2yi" path="res://assets/player_assets/MALE_CHAR/Main_Char_Animations.png" id="2_1x8uj"]
 [ext_resource type="Shader" path="res://scenes/player_scenes/MALE_PLAYER/male_player.gdshader" id="2_5la36"]
 [ext_resource type="PackedScene" uid="uid://smt8r84pk1vk" path="res://scenes/UI_scenes/controls/joystick/joystick.tscn" id="3_07557"]
+[ext_resource type="PackedScene" uid="uid://cvrhox0avgtyd" path="res://scenes/UI_scenes/leaderboard/leaderboard.tscn" id="4_w1b2n"]
+[ext_resource type="PackedScene" uid="uid://dfy3apgcwrc0u" path="res://scenes/UI_scenes/controls/sprint/sprint_button.tscn" id="5_t2ir3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ygvg"]
+resource_local_to_scene = true
 shader = ExtResource("2_5la36")
 shader_parameter/line_color = Color(0.623529, 0.0117647, 0, 1)
 shader_parameter/line_thickness = 0.0
@@ -250,15 +253,19 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/sync = true
-properties/0/watch = false
+properties/0/watch = true
 properties/1/path = NodePath("Camera2D:position")
 properties/1/spawn = true
 properties/1/sync = true
-properties/1/watch = false
+properties/1/watch = true
 properties/2/path = NodePath("playername:theme_override_colors/font_color")
 properties/2/spawn = true
 properties/2/sync = true
-properties/2/watch = false
+properties/2/watch = true
+properties/3/path = NodePath(".:can_tag")
+properties/3/spawn = true
+properties/3/sync = true
+properties/3/watch = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dalp6"]
 radius = 88.0
@@ -273,9 +280,11 @@ scale = Vector2(0.903438, 0.88258)
 texture = ExtResource("2_1x8uj")
 hframes = 10
 vframes = 5
-frame = 22
+frame = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
 position = Vector2(5.5, 6.125)
 shape = SubResource("RectangleShape2D_cc57n")
 
@@ -292,12 +301,27 @@ parameters/idle/blend_position = Vector2(-0.998466, 0.0240176)
 parameters/walk/blend_position = Vector2(-0.00160003, 0.072455)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+rotation = -0.0123881
 zoom = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" parent="Camera2D" instance=ExtResource("4_w1b2n")]
+visible = false
+offset_left = -1779.97
+offset_top = -982.125
+offset_right = -1069.97
+offset_bottom = -662.125
+rotation = 0.0124982
+scale = Vector2(2, 2)
 
 [node name="joystick" parent="Camera2D" instance=ExtResource("3_07557")]
 visible = false
-position = Vector2(-1416, 600)
-scale = Vector2(2, 2)
+position = Vector2(-1280, 616)
+scale = Vector2(1.6, 1.6)
+
+[node name="sprint_button" parent="Camera2D" instance=ExtResource("5_t2ir3")]
+visible = false
+position = Vector2(984, 616)
+scale = Vector2(0.5, 0.5)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_6vtq1")
@@ -329,7 +353,28 @@ autostart = true
 wait_time = 3.0
 one_shot = true
 
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="winner" type="Label" parent="."]
+visible = false
+offset_left = -672.0
+offset_top = -608.0
+offset_right = 624.0
+offset_bottom = -280.0
+theme_override_font_sizes/font_size = 100
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="ColTimer" to="." method="_on_col_timer_timeout"]
 [connection signal="timeout" from="TagTimer" to="." method="_on_tag_timer_timeout"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]

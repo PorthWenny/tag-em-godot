@@ -1,9 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcoocu6cdrddw"]
+[gd_scene load_steps=2 format=3 uid="uid://bcoocu6cdrddw"]
 
 [ext_resource type="Script" path="res://scenes/UI_scenes/main_menu/main_menu.gd" id="1_65gd7"]
-[ext_resource type="Texture2D" uid="uid://cinytmjy2vwdc" path="res://assets/objects/menu_bg.png" id="2_02vh5"]
-[ext_resource type="Script" path="res://scenes/UI_scenes/main_menu/background.gd" id="3_vkdg0"]
-[ext_resource type="Theme" uid="uid://yqhtqr76mkc3" path="res://Default.tres" id="4_xu0r8"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -16,29 +13,20 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_65gd7")
 
-[node name="MenuBg" type="Sprite2D" parent="."]
-texture_filter = 2
-position = Vector2(576, 324)
-scale = Vector2(0.601042, 0.601852)
-texture = ExtResource("2_02vh5")
-script = ExtResource("3_vkdg0")
-
 [node name="start" type="Button" parent="."]
 layout_mode = 0
-offset_left = 829.0
-offset_top = 391.0
-offset_right = 1036.0
-offset_bottom = 470.0
-theme = ExtResource("4_xu0r8")
+offset_left = 448.0
+offset_top = 192.0
+offset_right = 704.0
+offset_bottom = 256.0
 text = "Start"
 
 [node name="quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 829.0
-offset_top = 494.0
-offset_right = 1036.0
-offset_bottom = 563.0
-theme = ExtResource("4_xu0r8")
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 704.0
+offset_bottom = 448.0
 text = "Quit
 "
 
